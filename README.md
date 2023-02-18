@@ -3,7 +3,7 @@
 
 The folder 1280x1024 contains resized overlays resized from 1920x1080 from the Bezel Project for **vertical games only**.
 
-The conversion process consisted of running the batch file Resize280x1024fromFile.bat in the overlays folder with the png files. Notes that this batch file only converts the files listed in VerticalGames.txt
+The conversion process consisted of running the batch file `Resize280x1024fromFile.bat` in the overlays folder with the png files. The batch file only converts the files listed in VerticalGames.txt
 
 **Image Magick** (https://imagemagick.org/) needs to be installed on your PC. 
 

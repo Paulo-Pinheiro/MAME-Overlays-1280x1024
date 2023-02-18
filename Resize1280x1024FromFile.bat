@@ -24,7 +24,6 @@ FOR /F %%i IN (VerticalGames.txt) DO (
 		del %%i-1.png
 
 		echo created %%i_1280x1024.png
-
 		set /A argCountGood+=1
 	
 	) ELSE (

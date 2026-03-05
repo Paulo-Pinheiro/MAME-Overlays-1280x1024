@@ -21,10 +21,9 @@ for %%x in (%*) do (
 
 	IF EXIST %%~x.png (
 
-		REM 1. Resize the image to the correct size 1280x1024
+		REM 1. Resize the image to the correct size (2x426)x1024
 		REM 2. Crop into 2 equal tiles (left &right)
-		REM 3. Resize the tiles by 0.666 (=1920/1280)
-		magick %%~x.png -resize 1280x1024\! -crop 2x1@ -resize 426x1024\! %%~x.png
+		magick %%~x.png -filter Lanczos -resize 852x1024\! -crop 2x1@ %%~x.png
 
 		REM 4. We need to increase the emulator view by introducing a transparency of size 428 so that 1280 = 426+428+426
 		magick convert -size 428x1024 xc:transparent transparent.png
@@ -58,3 +57,4 @@ GOTO Exit:
 
 :Exit
 	echo Done!
+
